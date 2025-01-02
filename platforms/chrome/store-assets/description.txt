@@ -1,0 +1,18 @@
+History Tracker - Your Private Browsing History Manager
+
+Track and manage your browsing history with complete privacy. All data stays on your device!
+
+Features:
+• Automatic tracking of visited pages
+• Clean and intuitive interface
+• View complete browsing history
+• Privacy-focused: all data stored locally
+• Lightweight and fast
+
+Perfect for:
+• Keeping track of your online research
+• Finding previously visited pages
+• Managing your browsing activity
+• Maintaining privacy while tracking history
+
+Your data never leaves your device - History Tracker stores everything locally using secure browser storage.
