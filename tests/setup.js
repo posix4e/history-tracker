@@ -1,5 +1,4 @@
 require('fake-indexeddb/auto');
-require('@testing-library/jest-dom');
 
 // Mock chrome API
 global.chrome = {

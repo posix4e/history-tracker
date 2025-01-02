@@ -1,3 +1,5 @@
+const { jest } = require('@jest/globals');
+
 describe('Background Script', () => {
   let db;
   
@@ -7,6 +9,9 @@ describe('Background Script', () => {
     
     // Reset chrome API mocks
     jest.clearAllMocks();
+    
+    // Clear module cache
+    jest.resetModules();
   });
 
   test('initializes database on startup', (done) => {
@@ -15,7 +20,7 @@ describe('Background Script', () => {
     const request = indexedDB.open('historyTrackerDB', 1);
     
     request.onerror = () => {
-      done.fail('Database failed to open');
+      done('Database failed to open');
     };
     
     request.onsuccess = () => {
