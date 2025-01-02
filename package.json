@@ -13,15 +13,6 @@
     "package": "node scripts/package.js",
     "prepare": "npm run build"
   },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFiles": [
-      "<rootDir>/tests/setup.js"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|less)$": "<rootDir>/tests/mocks/styleMock.js"
-    }
-  },
   "keywords": [
     "browser-extension",
     "history",
