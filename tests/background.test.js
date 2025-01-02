@@ -1,5 +1,3 @@
-const { jest } = require('@jest/globals');
-
 describe('Background Script', () => {
   let db;
   
