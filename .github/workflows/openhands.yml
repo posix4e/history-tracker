@@ -1,0 +1,26 @@
+name: OpenHands AI Assistant
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [opened, edited]
+  pull_request_review_comment:
+    types: [created, edited]
+
+jobs:
+  openhands:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.issue.pull_request && !contains(github.event.sender.login, 'openhands') }}
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run OpenHands AI Assistant
+      uses: all-hands-dev/openhands-action@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
